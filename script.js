@@ -28,4 +28,12 @@ function addQuote(quote, author) {
 
   const QUOTELIST = document.getElementById("quote-list");
   QUOTELIST.appendChild(QUOTEDIV);
+
+  let quoteCount = 0;
+  const SUBMITBUTTON = document.querySelector("submit");
+
+  SUBMITBUTTON.addEventListener("Click", () => {
+    quoteCount += 1;
+    document.getElementById("count").innerText = `${quoteCount} citations`;
+    })
 }
